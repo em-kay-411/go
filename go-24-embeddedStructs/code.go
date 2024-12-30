@@ -21,5 +21,5 @@ func main() {
 		color: "blue",
 	}
 
-	fmt.Println(c1.car.name)
+	fmt.Println(c1)
 }
