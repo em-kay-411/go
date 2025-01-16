@@ -3,19 +3,25 @@ package main
 import "fmt"
 
 func main() {
-	map1 := map[string]int{"John": 23, "Robin": 20}
+	map1 := map[string]int{"John": 22, "Lucy": 45}
+
+	// Adding element
+	map1["Rohan"] = 35
 	fmt.Println(map1)
 
-	// Add new element
-	map1["Rohan"] = 34
-
-	// Delete an element
+	// Deleting element
 	delete(map1, "John")
+	fmt.Println(map1)
 
-	// Check if the key is present in a map
-	if value, ok := map1["John"]; !ok {
-		fmt.Println("The key is not present in the map")
+	// Search in map
+	if _, ok := map1["John"]; !ok {
+		fmt.Println("John is not present")
 	} else {
-		fmt.Println(value)
+		fmt.Println("John is present")
+	}
+
+	// Iterating
+	for key, value := range map1 {
+		fmt.Println(key, value)
 	}
 }
